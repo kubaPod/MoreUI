@@ -15,7 +15,7 @@ pause >nul
 
 git add .
 
-git commit -m "readMe and template updated"
+git commit -m "SearchPopup"
 
 git status
 
