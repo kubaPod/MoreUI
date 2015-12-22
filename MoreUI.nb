@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     58477,       1249]
-NotebookOptionsPosition[     56579,       1189]
-NotebookOutlinePosition[     56922,       1204]
-CellTagsIndexPosition[     56879,       1201]
+NotebookDataLength[    155928,       3129]
+NotebookOptionsPosition[    153341,       3052]
+NotebookOutlinePosition[    153684,       3067]
+CellTagsIndexPosition[    153641,       3064]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,14 +38,18 @@ Cell[BoxData[
      RowBox[{"Import", "[", "\"\<pushTemplate.tr\>\"", "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{"<|", "\[IndentingNewLine]", 
-      RowBox[{"\"\<commitMessage\>\"", "\[Rule]", "\"\<SearchPopup\>\""}], 
-      "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
-     "\"\<temp.bat\>\""}], "\[IndentingNewLine]", "]"}], "//", "SystemOpen"}],
-   "\[IndentingNewLine]"}]], "Input",
+      RowBox[{
+      "\"\<commitMessage\>\"", "\[Rule]", 
+       "\"\<ActionNestedMenu beta release\>\""}], "\[IndentingNewLine]", 
+      "|>"}], ",", "\[IndentingNewLine]", "\"\<temp.bat\>\""}], 
+    "\[IndentingNewLine]", "]"}], "//", "SystemOpen"}], 
+  "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.6587718298360386`*^9, 3.6587718317100415`*^9}, 
    3.6589389697607994`*^9, {3.6589404360779896`*^9, 3.658940473170066*^9}, {
    3.6589405187531567`*^9, 3.6589405283543763`*^9}, {3.6590041224753017`*^9, 
-   3.659004131064317*^9}, {3.659630351486318*^9, 3.659630352439478*^9}}]
+   3.659004131064317*^9}, {3.659630351486318*^9, 3.659630352439478*^9}, {
+   3.659760823108653*^9, 3.659760832292692*^9}, {3.6597664143152976`*^9, 
+   3.659766429461441*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -74,9 +78,11 @@ Cell[CellGroupData[{
 Cell["nested menu", "Subsection",
  CellChangeTimes->{{3.659595011287938*^9, 3.659595013218235*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"ActionNestedMenu", "[", "\[IndentingNewLine]", 
-  RowBox[{"\"\<File\>\"", "->", 
+  RowBox[{"\"\<Test menu\>\"", "->", 
    RowBox[{"{", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"\"\<lbl 11\>\"", "\[RuleDelayed]", 
@@ -102,27 +108,1598 @@ Cell[BoxData[
      RowBox[{"\"\<lbl 15\>\"", "\[Rule]", 
       RowBox[{"{", "\[IndentingNewLine]", 
        RowBox[{
-        RowBox[{"\"\<lbl 51\>\"", "\[RuleDelayed]", 
-         RowBox[{"Print", "[", "41", "]"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"\"\<lbl 52\>\"", "\[RuleDelayed]", 
-         RowBox[{"Print", "[", "42", "]"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"\"\<lbl 53\>\"", "\[Rule]", 
+        RowBox[{"\"\<lbl 51\>\"", "\[Rule]", 
          RowBox[{"{", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"\"\<lbl 531\>\"", "\[RuleDelayed]", 
+           RowBox[{"\"\<lbl 511\>\"", "\[RuleDelayed]", 
             RowBox[{"Print", "[", "531", "]"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{"\"\<lbl 532\>\"", "\[RuleDelayed]", 
+           RowBox[{"\"\<lbl 512\>\"", "\[RuleDelayed]", 
+            RowBox[{"Print", "[", "532", "]"}]}]}], "\[IndentingNewLine]", 
+          "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<lbl 52\>\"", "\[RuleDelayed]", 
+         RowBox[{"Print", "[", "41", "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<lbl 53\>\"", "\[RuleDelayed]", 
+         RowBox[{"Print", "[", "42", "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<lbl 54\>\"", "\[Rule]", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"\"\<lbl 541\>\"", "\[RuleDelayed]", 
+            RowBox[{"Print", "[", "531", "]"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<lbl 542\>\"", "\[RuleDelayed]", 
             RowBox[{"Print", "[", "532", "]"}]}]}], "\[IndentingNewLine]", 
           "}"}]}]}], "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", 
     "}"}]}], "\[IndentingNewLine]", "]"}]], "Input",
  CellChangeTimes->{{3.659543539494315*^9, 3.6595435435630913`*^9}, {
-  3.6595448005020204`*^9, 3.6595448095279875`*^9}, {3.6595458823705206`*^9, 
-  3.659545889348624*^9}, {3.6595505893746047`*^9, 3.6595506136913657`*^9}}],
+   3.6595448005020204`*^9, 3.6595448095279875`*^9}, {3.6595458823705206`*^9, 
+   3.659545889348624*^9}, {3.6595505893746047`*^9, 3.6595506136913657`*^9}, {
+   3.6597609378555455`*^9, 3.659760953416959*^9}, {3.6597652786277075`*^9, 
+   3.6597652894295435`*^9}, 3.659765457850496*^9, {3.659765840179228*^9, 
+   3.659765841574171*^9}}],
+
+Cell[BoxData[
+ DynamicModuleBox[{}, 
+  TagBox[
+   FrameBox[
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{MoreUI`Private`thisBox$$ = BoxObject[43777], 
+         MoreUI`Private`sumbMenuBox$$ = CellObject[45985]}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               PaneBox["\<\"Test menu\"\>",
+                ImageSize->100], "\<\">\"\>"}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Background->Dynamic[
+             If[
+              CurrentValue["MouseOver"], 
+              GrayLevel[0.8], None]],
+           BaseStyle->"Panel",
+           FrameMargins->5,
+           FrameStyle->2,
+           ImageMargins->0,
+           ImageSize->{{120, Full}, {Automatic, Full}},
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> (
+             MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 0 + 1]; 
+             NotebookDelete[MoreUI`Private`sumbMenuBox$$]; 
+             MoreUI`Private`menuStates[0 + 1] = (MoreUI`Private`sumbMenuBox$$ = 
+               MoreUI`Private`attachTo[MoreUI`Private`thisBox$$, 
+                 Association[
+                 "label" -> "Test menu", "subMenuAlignment" -> {Left, Bottom},
+                   "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 11", Print[1]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> 
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]}, PassEventsDown -> 
+                    True], 
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 12", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 12", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 21", Print[21]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 22", Print[22]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 12", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 21", Print[21]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 22", Print[22]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 13", Print[3]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> 
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 14", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 14", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button["lbl 41", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 42", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 14", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 41", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 42", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 15", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 15", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 51", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 52", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 53", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 54", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 15", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 51", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button["lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 52", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 53", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 54", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 1]; Null)}, PassEventsDown -> 
+                    True]]["subMenu"], 
+                 Lookup[
+                  Association[
+                  "label" -> "Test menu", 
+                   "subMenuAlignment" -> {Left, Bottom}, "subMenu" -> 
+                   EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 11", Print[1]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> 
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 12", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 12", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 21", Print[21]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 22", Print[22]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 12", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 21", Print[21]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 22", Print[22]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 13", Print[3]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> 
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 14", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 14", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 41", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 42", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 14", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 41", Print[41]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 42", Print[42]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    
+                    DynamicModule[{
+                    MoreUI`Private`thisBox, MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 15", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (
+                    MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[1 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 15", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 51", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 52", Print[41]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 53", Print[42]; 
+                    MoreUI`Private`dropSubMenu[MoreUI`Private`menuStates, 1], 
+                    Appearance -> "Frameless", FrameMargins -> 5, 
+                    ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 54", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button["lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 15", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 51", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 51", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 511", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 512", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}], 
+                    EventHandler[
+                    Button[
+                    "lbl 52", Print[41]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 53", Print[42]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]}, PassEventsDown -> 
+                    True], 
+                    
+                    DynamicModule[{MoreUI`Private`thisBox, 
+                    MoreUI`Private`sumbMenuBox}, 
+                    EventHandler[
+                    Framed[
+                    Grid[{{
+                    Pane["lbl 54", 100], ">"}}], BaseStyle -> "Panel", 
+                    FrameStyle -> None, FrameMargins -> 5, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> (MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 2 + 1]; 
+                    NotebookDelete[MoreUI`Private`sumbMenuBox]; 
+                    MoreUI`Private`menuStates[2 + 1] = (
+                    MoreUI`Private`sumbMenuBox = 
+                    MoreUI`Private`attachTo[MoreUI`Private`thisBox, 
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}]["subMenu"], 
+                    Lookup[
+                    Association["label" -> "lbl 54", "subMenu" -> EventHandler[
+                    Framed[
+                    Column[{
+                    EventHandler[
+                    Button[
+                    "lbl 541", Print[531]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True], 
+                    EventHandler[
+                    Button[
+                    "lbl 542", Print[532]; MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 1], Appearance -> "Frameless", 
+                    FrameMargins -> 5, ImageMargins -> 0, Alignment -> Left, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}, Background -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.8], None]]], {
+                    "MouseEntered" :> MoreUI`Private`dropSubMenu[
+                    MoreUI`Private`menuStates, 3 + 1]}, PassEventsDown -> 
+                    True]}], FrameStyle -> None, FrameMargins -> 0, 
+                    ImageMargins -> 0, ImageSize -> {{120, Full}, {
+                    Automatic, Full}}], {"MouseEntered" :> (
+                    MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 3]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 2]; Null)}, PassEventsDown -> 
+                    True], "subMenuAlignment" -> {Right, Top}], 
+                    "subMenuAlignment", {Right, Top}]]); Null)}, 
+                    PassEventsDown -> True], 
+                    Initialization :> (MoreUI`Private`thisBox = 
+                    EvaluationBox[]), DynamicModuleValues :> {}]}], 
+                    FrameStyle -> None, FrameMargins -> 0, ImageMargins -> 0, 
+                    ImageSize -> {{120, Full}, {Automatic, Full}}], {
+                    "MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+                    MoreUI`Private`menuStates[-1]]; Null), 
+                    "MouseExited" :> (
+                    MoreUI`Private`menuStates[-1] = 
+                    MoreUI`Private`scheduleMenuClosing[
+                    MoreUI`Private`menuStates, 1]; Null)}, PassEventsDown -> 
+                    True]], "subMenuAlignment", {Right, Top}]]); Null), 
+            PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+            True}]],
+         DynamicModuleValues:>{},
+         Initialization:>(MoreUI`Private`thisBox$$ = EvaluationBox[])]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"],
+    FrameMargins->0,
+    FrameStyle->None,
+    ImageMargins->0,
+    ImageSize->{{120, Full}, {Automatic, Full}},
+    StripOnInput->False],
+   EventHandlerTag[{"MouseEntered" :> (MoreUI`Private`forgetAboutClosing[
+        MoreUI`Private`menuStates[-1]]; Null), 
+     "MouseExited" :> (
+      MoreUI`Private`menuStates[-1] = 
+       MoreUI`Private`scheduleMenuClosing[MoreUI`Private`menuStates, 0]; 
+      Null), PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+     True}]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.6597657286523867`*^9, 3.6597658426986747`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"PreemptProtect", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.6597147949092236`*^9, 3.6597147979053526`*^9}}],
 
 Cell[BoxData[
  RowBox[{"CurrentValue", "@", "\"\<PanelBackground\>\""}]], "Input",
  CellChangeTimes->{{3.6595448891116505`*^9, 3.65954489993056*^9}}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -144,8 +1721,6 @@ Cell[BoxData[
  CellChangeTimes->{{3.6579905312885838`*^9, 3.657990564021446*^9}, {
   3.6592894418136067`*^9, 3.659289443173032*^9}, {3.659543614145625*^9, 
   3.65954361589569*^9}}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -177,242 +1752,6 @@ Cell[BoxData[{
   "]"}]}], "Input",
  CellChangeTimes->{{3.659575486910702*^9, 3.6595754869263277`*^9}, 
    3.6595952489399443`*^9}],
-
-Cell[BoxData[
- TagBox[GridBox[{
-    {
-     DynamicModuleBox[{MoreUI`Private`thisBox$$ = BoxObject[61585], 
-      MoreUI`Private`currentList$$ = {
-      "Acrux", "Anaxagoras", "Alex", "Alexei", "Alexander", "Alexanders", 
-       "Alexandra", "Alexandria", "Alexandrian", "Alexandrians", "Alexis", 
-       "Ajax", "affix", "affixed", "affixes", "affixing", "admix", 
-       "admixture", "admixtures", "admixed", "admixes", "admixing", "annex", 
-       "annexation", "ambidexterity", "ambidextrous", "ambidextrously"}, 
-      MoreUI`Private`autocompleteF$$ = AutocompletionFunction[
-      JLink`Objects`vm1`JavaObject32632352718979073], 
-      MoreUI`Private`attachedCell$$ = CellObject[64961], 
-      MoreUI`Private`dynamicFunction$$ = ($CellContext`selection = #; 
-      MoreUI`Private`updateCurrentList$$[]; MoreUI`Private`whatToDo$$[])& , 
-      MoreUI`Private`whatToDo$$, MoreUI`Private`lastLength$$ = 0, 
-      MoreUI`Private`cPos$$ = 6, MoreUI`Private`itemWrapper$$, 
-      MoreUI`Private`attachTo$$, MoreUI`Private`dropMenu$$, 
-      MoreUI`Private`menu$$, MoreUI`Private`updateCurrentList$$, 
-      MoreUI`Private`scrollY$$ = 126.}, 
-      TagBox[
-       InputFieldBox[
-        Dynamic[$CellContext`selection, MoreUI`Private`dynamicFunction$$, 
-         SynchronousUpdating -> False], String,
-        ContinuousAction->True,
-        FieldHint->"Search"],
-       EventHandlerTag[{
-        "MouseClicked" :> 
-         If[Length[MoreUI`Private`currentList$$] > 0, 
-           MoreUI`Private`attachedCell$$ = 
-           MoreUI`Private`attachTo$$[MoreUI`Private`thisBox$$, 
-             MoreUI`Private`menu$$[MoreUI`Private`currentList$$]]], 
-         "DownArrowKeyDown" :> (
-          MoreUI`Private`cPos$$ = Mod[MoreUI`Private`cPos$$ + 1, 
-             Length[MoreUI`Private`currentList$$], 1]; 
-          If[MoreUI`Private`cPos$$ > 
-            MoreUI`Private`$menuMaxHeight/MoreUI`Private`$itemHeight, 
-            AddTo[MoreUI`Private`scrollY$$, MoreUI`Private`$itemHeight]]; 
-          If[MoreUI`Private`cPos$$ == 1, MoreUI`Private`scrollY$$ = 1]; Null),
-          "UpArrowKeyDown" :> (MoreUI`Private`cPos$$ = 
-          Mod[MoreUI`Private`cPos$$ - 1, 
-            Length[MoreUI`Private`currentList$$], 1]), 
-         "ReturnKeyDown" :> (MoreUI`Private`updateCurrentList$$[]; 
-          If[Length[MoreUI`Private`currentList$$] >= 
-            MoreUI`Private`cPos$$, $CellContext`selection = 
-             Part[MoreUI`Private`currentList$$, MoreUI`Private`cPos$$]; 
-            MoreUI`Private`cPos$$ = 1; FinishDynamic[]; Null]; 
-          MoreUI`Private`dropMenu$$[]; SelectionMove[
-            EvaluationNotebook[], After, Expression]), PassEventsDown -> True,
-          Method -> "Queued", PassEventsUp -> True}]],
-      DynamicModuleValues:>{{
-        DownValues[MoreUI`Private`whatToDo$$] = {HoldPattern[
-             MoreUI`Private`whatToDo$$[]] :> Which[
-             And[
-             MoreUI`Private`lastLength$$ != 0, 
-              Length[MoreUI`Private`currentList$$] == 0], 
-             MoreUI`Private`dropMenu$$[], 
-             Or[
-              And[
-              MoreUI`Private`lastLength$$ == 0, 
-               Length[MoreUI`Private`currentList$$] > 0], 
-              And[
-               And[
-               MoreUI`Private`lastLength$$ != 0, 
-                Length[MoreUI`Private`currentList$$] != 0], 
-               Not[
-                MatchQ[MoreUI`Private`attachedCell$$, 
-                 Blank[CellObject]]]]], MoreUI`Private`attachedCell$$ = 
-             MoreUI`Private`attachTo$$[MoreUI`Private`thisBox$$, 
-               MoreUI`Private`menu$$[MoreUI`Private`currentList$$]]]}}, {
-        DownValues[MoreUI`Private`itemWrapper$$] = {HoldPattern[
-             MoreUI`Private`itemWrapper$$[
-              Pattern[MoreUI`Private`item$, 
-               Blank[]], {
-               Pattern[MoreUI`Private`pos$, 
-                Blank[]]}]] :> (MouseAppearance[#, "LinkHand"]& )[
-             EventHandler[
-              Framed[
-              MoreUI`Private`item$, 
-               ImageSize -> {Full, MoreUI`Private`$itemHeight}, FrameStyle -> 
-               None, Background -> Dynamic[
-                 If[MoreUI`Private`pos$ == MoreUI`Private`cPos$$, 
-                  CurrentValue["PanelBackground"], White]]], {
-              "MouseClicked" :> (
-                MoreUI`Private`pos$ == 
-                 MoreUI`Private`cPos$$; $CellContext`selection = 
-                 MoreUI`Private`item$; MoreUI`Private`cPos$$ = 1; 
-                MoreUI`Private`dropMenu$$[]; 
-                MoreUI`Private`updateCurrentList$$[]; Null), 
-               "MouseEntered" :> (MoreUI`Private`cPos$$ = 
-                MoreUI`Private`pos$)}, PassEventsDown -> True]]}}, {
-        DownValues[MoreUI`Private`attachTo$$] = {HoldPattern[
-             MoreUI`Private`attachTo$$[
-              Pattern[MoreUI`Private`parentbox, 
-               Blank[]], 
-              Pattern[MoreUI`Private`what, 
-               Blank[]]]] :> MathLink`CallFrontEnd[
-             FrontEnd`AttachCell[MoreUI`Private`parentbox, 
-              ToBoxes[
-               ExpressionCell[
-               MoreUI`Private`what, StripOnInput -> True, Background -> White,
-                 CellFrameColor -> GrayLevel[0.8], CellFrameMargins -> 0, 
-                CellFrame -> 2]], {Automatic, {Left, Bottom}}, {Left, Top}, 
-              "ClosingActions" -> {
-               "ParentChanged", "EvaluatorQuit", "OutsideMouseClick"}]]}}, {
-        DownValues[MoreUI`Private`dropMenu$$] = {HoldPattern[
-             MoreUI`Private`dropMenu$$[]] :> If[
-             MatchQ[MoreUI`Private`attachedCell$$, 
-              Blank[CellObject]], 
-             NotebookDelete[MoreUI`Private`attachedCell$$]; 
-             Unset[MoreUI`Private`attachedCell$$]]}}, {
-        DownValues[MoreUI`Private`menu$$] = {HoldPattern[
-             MoreUI`Private`menu$$[
-              Pattern[MoreUI`Private`currentList$, 
-               Blank[]]]] :> DynamicModule[{}, 
-             EventHandler[
-              Pane[
-               Dynamic[
-                Column[
-                 MapIndexed[
-                 MoreUI`Private`itemWrapper$$, MoreUI`Private`currentList$], 
-                 Spacings -> 0], 
-                TrackedSymbols :> {MoreUI`Private`currentList$}], {
-               200, {All, 300}}, AppearanceElements -> None, 
-               Scrollbars -> {False, True}, ScrollPosition -> 
-               Dynamic[{0, MoreUI`Private`scrollY$$}, (
-                 MoreUI`Private`scrollY$$ = Last[#])& ]], 
-              "MouseExited" :> (MoreUI`Private`dropMenu$$[]; Null)], 
-             InheritScope -> True]}, 
-         Attributes[MoreUI`Private`menu$$] = {HoldFirst}}, {
-        DownValues[MoreUI`Private`updateCurrentList$$] = {HoldPattern[
-             MoreUI`Private`updateCurrentList$$[]] :> (
-            MoreUI`Private`lastLength$$ = 
-             Length[MoreUI`Private`currentList$$]; 
-            MoreUI`Private`currentList$$ = 
-             MoreUI`Private`autocompleteF$$[$CellContext`selection]; Null)}}},
-      Initialization:>(MoreUI`Private`$itemHeight = 25; 
-       MoreUI`Private`$menuMaxHeight = 300; 
-       MoreUI`Private`thisBox$$ = EvaluationBox[]; 
-       MoreUI`Private`autocompleteF$$ = 
-        Autocomplete[{
-          "Ajax", "admixes", "Acrux", "Alex", "affix", "admixtures", "Alexei",
-            "affixed", "admixing", "ambidextrously", "admixed", "admix", 
-           "affixing", "ambidextrous", "Alexandrians", "Alexandria", 
-           "Anaxagoras", "Alexandrian", "annexation", "Alexandra", 
-           "admixture", "Alexis", "Alexanders", "annex", "affixes", 
-           "ambidexterity", "Alexander"}]; 
-       MoreUI`Private`currentList$$ = 
-        MoreUI`Private`autocompleteF$$[$CellContext`selection]; 
-       MoreUI`Private`dynamicFunction$$ = ($CellContext`selection = #; 
-         MoreUI`Private`updateCurrentList$$[]; MoreUI`Private`whatToDo$$[])& ; 
-       MoreUI`Private`whatToDo$$[] := Which[
-          And[
-          MoreUI`Private`lastLength$$ != 0, 
-           Length[MoreUI`Private`currentList$$] == 0], 
-          MoreUI`Private`dropMenu$$[], 
-          Or[
-           And[
-           MoreUI`Private`lastLength$$ == 0, 
-            Length[MoreUI`Private`currentList$$] > 0], 
-           And[
-            And[
-            MoreUI`Private`lastLength$$ != 0, 
-             Length[MoreUI`Private`currentList$$] != 0], 
-            Not[
-             MatchQ[MoreUI`Private`attachedCell$$, 
-              Blank[CellObject]]]]], MoreUI`Private`attachedCell$$ = 
-          MoreUI`Private`attachTo$$[MoreUI`Private`thisBox$$, 
-            MoreUI`Private`menu$$[MoreUI`Private`currentList$$]]]; 
-       MoreUI`Private`attachTo$$[
-          Pattern[MoreUI`Private`parentbox, 
-           Blank[]], 
-          Pattern[MoreUI`Private`what, 
-           Blank[]]] := MathLink`CallFrontEnd[
-          FrontEnd`AttachCell[MoreUI`Private`parentbox, 
-           ToBoxes[
-            ExpressionCell[
-            MoreUI`Private`what, StripOnInput -> True, Background -> White, 
-             CellFrameColor -> GrayLevel[0.8], CellFrameMargins -> 0, 
-             CellFrame -> 2]], {Automatic, {Left, Bottom}}, {Left, Top}, 
-           "ClosingActions" -> {
-            "ParentChanged", "EvaluatorQuit", "OutsideMouseClick"}]]; 
-       SetAttributes[MoreUI`Private`menu$$, HoldFirst]; MoreUI`Private`menu$$[
-          Pattern[MoreUI`Private`currentList$, 
-           Blank[]]] := DynamicModule[{}, 
-          EventHandler[
-           Pane[
-            Dynamic[
-             Column[
-              MapIndexed[
-              MoreUI`Private`itemWrapper$$, MoreUI`Private`currentList$], 
-              Spacings -> 0], 
-             TrackedSymbols :> {MoreUI`Private`currentList$}], {
-            200, {All, 300}}, AppearanceElements -> None, 
-            Scrollbars -> {False, True}, ScrollPosition -> 
-            Dynamic[{0, MoreUI`Private`scrollY$$}, (MoreUI`Private`scrollY$$ = 
-              Last[#])& ]], 
-           "MouseExited" :> (MoreUI`Private`dropMenu$$[]; Null)], 
-          InheritScope -> True]; MoreUI`Private`itemWrapper$$[
-          Pattern[MoreUI`Private`item$, 
-           Blank[]], {
-           Pattern[MoreUI`Private`pos$, 
-            Blank[]]}] := (MouseAppearance[#, "LinkHand"]& )[
-          EventHandler[
-           Framed[
-           MoreUI`Private`item$, 
-            ImageSize -> {Full, MoreUI`Private`$itemHeight}, FrameStyle -> 
-            None, Background -> Dynamic[
-              If[MoreUI`Private`pos$ == MoreUI`Private`cPos$$, 
-               CurrentValue["PanelBackground"], White]]], {
-           "MouseClicked" :> (
-             MoreUI`Private`pos$ == 
-              MoreUI`Private`cPos$$; $CellContext`selection = 
-              MoreUI`Private`item$; MoreUI`Private`cPos$$ = 1; 
-             MoreUI`Private`dropMenu$$[]; 
-             MoreUI`Private`updateCurrentList$$[]; Null), 
-            "MouseEntered" :> (MoreUI`Private`cPos$$ = MoreUI`Private`pos$)}, 
-           PassEventsDown -> True]]; MoreUI`Private`dropMenu$$[] := If[
-          MatchQ[MoreUI`Private`attachedCell$$, 
-           Blank[CellObject]], NotebookDelete[MoreUI`Private`attachedCell$$]; 
-          Unset[MoreUI`Private`attachedCell$$]]; 
-       MoreUI`Private`updateCurrentList$$[] := (
-         MoreUI`Private`lastLength$$ = Length[MoreUI`Private`currentList$$]; 
-         MoreUI`Private`currentList$$ = 
-          MoreUI`Private`autocompleteF$$[$CellContext`selection]; Null)),
-      SynchronousInitialization->False]},
-    {
-     GraphicsBox[DiskBox[{0, 0}]]}
-   },
-   DefaultBaseStyle->"Column",
-   GridBoxAlignment->{"Columns" -> {{Left}}},
-   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-  "Column"]], "Output",
- CellChangeTimes->{3.6596302310568886`*^9}]
-}, Open  ]],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -1184,10 +2523,534 @@ Cell[BoxData[
   "]"}]], "Input",
  CellChangeTimes->{{3.659627211380477*^9, 3.659627215865155*^9}, {
   3.659627346519042*^9, 3.659627353478613*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["notebook", "Subsection",
+ CellChangeTimes->{{3.6597185945699606`*^9, 3.6597185953458347`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"attachTo", "[", 
+     RowBox[{"parentbox_", ",", "what_", ",", "alignment_"}], "]"}], ":=", 
+    RowBox[{"MathLink`CallFrontEnd", "[", 
+     RowBox[{"FrontEnd`AttachCell", "[", 
+      RowBox[{"parentbox", ",", 
+       RowBox[{"ToBoxes", "[", 
+        RowBox[{"ExpressionCell", "[", 
+         RowBox[{"what", ",", 
+          RowBox[{"StripOnInput", "\[Rule]", "True"}], ",", 
+          RowBox[{"Background", "\[Rule]", 
+           RowBox[{"CurrentValue", "@", "\"\<PanelBackground\>\""}]}], ",", 
+          RowBox[{"CellFrame", "\[Rule]", "1"}], ",", 
+          RowBox[{"CellFrameMargins", "\[Rule]", "0"}]}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Automatic", ",", "alignment"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Left", ",", "Top"}], "}"}], ",", 
+       RowBox[{"\"\<ClosingActions\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<ParentChanged\>\"", ",", "\"\<EvaluatorQuit\>\""}], 
+         "}"}]}]}], "]"}], "]"}]}], ";"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.659718596284893*^9, 3.659718596305538*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetAttributes", "[", 
+   RowBox[{"attachTo", ",", "HoldFirst"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"attachTo", "[", 
+    RowBox[{"over_", ",", "parentbox_", ",", "level_"}], "]"}], ":=", 
+   RowBox[{"MathLink`CallFrontEnd", "[", 
+    RowBox[{"FrontEnd`AttachCell", "[", 
+     RowBox[{"parentbox", ",", 
+      RowBox[{"ToBoxes", "[", 
+       RowBox[{"ExpressionCell", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"DynamicModule", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"parentBox", ",", "attachedCell"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"EventHandler", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Panel", "[", "\"\<test\>\"", "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<MouseMoved\>\"", "\[RuleDelayed]", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"over", "[", "level", "]"}], "=", "True"}], ")"}]}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"\"\<MouseExited\>\"", "\[RuleDelayed]", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"over", "[", "level", "]"}], "=", "False"}], ")"}]}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"\"\<MouseEntered\>\"", "\[RuleDelayed]", 
+              RowBox[{"(", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"NotebookDelete", "@", "attachedCell"}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"attachedCell", "=", 
+                 RowBox[{"attachTo", "[", 
+                  RowBox[{"over", ",", "parentBox", ",", 
+                   RowBox[{"level", "+", "1"}]}], "]"}]}], ";"}], 
+               "\[IndentingNewLine]", ")"}]}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Initialization", "\[RuleDelayed]", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"parentBox", "=", 
+               RowBox[{"EvaluationBox", "[", "]"}]}], ";"}], ")"}]}]}], 
+          "\[IndentingNewLine]", "]"}], ",", 
+         RowBox[{"StripOnInput", "\[Rule]", "True"}], ",", 
+         RowBox[{"Background", "\[Rule]", 
+          RowBox[{"Opacity", "@", "0"}]}], ",", 
+         RowBox[{"CellMargins", "\[Rule]", "5"}], ",", 
+         RowBox[{"CellFrameColor", "\[Rule]", "Red"}], ",", 
+         RowBox[{"CellFrameMargins", "\[Rule]", "0"}], ",", 
+         RowBox[{"CellFrame", "\[Rule]", "1"}]}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", 
+        RowBox[{"{", 
+         RowBox[{"Right", ",", "Bottom"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Top"}], "}"}], ",", 
+      RowBox[{"\"\<ClosingActions\>\"", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ParentChanged\>\"", ",", "\"\<EvaluatorQuit\>\"", ",", 
+         "\"\<OutsideMouseClick\>\""}], "}"}]}]}], "]"}], "]"}]}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"parentBox", ",", "attachedCell"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"EventHandler", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"DynamicWrapper", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Panel", "[", "\"\<test\>\"", "]"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Not", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Or", "@@", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Print", "[", "#", "]"}], ";", "#"}], ")"}]}], "&"}], 
+           "[", 
+           RowBox[{"Array", "[", 
+            RowBox[{"over", ",", 
+             RowBox[{"{", "5", "}"}], ",", "0"}], "]"}], "]"}], "]"}], ",", 
+         RowBox[{"NotebookDelete", "@", "attachedCell"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"UpdateInterval", "\[Rule]", "1"}]}], "]"}], ",", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\"\<MouseEntered\>\"", "\[RuleDelayed]", 
+        RowBox[{"(", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"over", "[", "0", "]"}], "=", "True"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"NotebookDelete", "@", "attachedCell"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"attachedCell", "=", 
+           RowBox[{"attachTo", "[", "\[IndentingNewLine]", 
+            RowBox[{"over", ",", "parentBox", ",", "1"}], 
+            "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}]}], ";"}], 
+         "\[IndentingNewLine]", ")"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<MouseExited\>\"", "\[RuleDelayed]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"over", "[", "0", "]"}], "=", "False"}], ")"}]}]}], "}"}]}],
+     "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"parentBox", "=", 
+       RowBox[{"EvaluationBox", "[", "]"}]}], ";"}], ")"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.659718660150503*^9, 3.6597186741605606`*^9}, {
+   3.6597187077447457`*^9, 3.659718834174115*^9}, {3.6597188817794266`*^9, 
+   3.659718920748789*^9}, {3.6597190556863475`*^9, 3.6597190945871563`*^9}, {
+   3.6597191381840115`*^9, 3.659719155625284*^9}, {3.6597192152306533`*^9, 
+   3.659719318390786*^9}, {3.6597193921627903`*^9, 3.6597194890054307`*^9}, {
+   3.65971953118596*^9, 3.65971971845199*^9}, 3.6597215150918283`*^9, {
+   3.6597215775555587`*^9, 3.6597215790048523`*^9}, {3.659721620700143*^9, 
+   3.6597216435483027`*^9}, {3.6597217157927446`*^9, 
+   3.6597217263305283`*^9}, {3.6597218008617477`*^9, 3.6597218493595133`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Array", "[", 
+  RowBox[{"over", ",", 
+   RowBox[{"{", "3", "}"}], ",", "1", ",", "Or"}], "]"}]], "Input",
+ CellChangeTimes->{{3.659719101547123*^9, 3.6597191134775124`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"over", "[", "1", "]"}], "=", "True"}]], "Input",
+ CellChangeTimes->{{3.659719120415881*^9, 3.6597191315313983`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"f", ",", "g"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "[", "n_", "]"}], ":=", 
+      RowBox[{"#", "+", "y"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"g", "[", "n_", "]"}], ":=", 
+      RowBox[{"#", "^", "2"}]}], ";"}], ")"}], "&"}], "[", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"int", "[", "i", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], "\[IndentingNewLine]",
+   "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6597219467871857`*^9, 3.65972195152407*^9}, {
+  3.659721981627157*^9, 3.659721998664548*^9}, {3.659722516816619*^9, 
+  3.6597225856925716`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "f"}]], "Input",
+ CellChangeTimes->{{3.65972195681549*^9, 3.6597219571027675`*^9}, {
+  3.659722557532243*^9, 3.6597225583850093`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Context", "@", "Shift"}]], "Input",
+ CellChangeTimes->{{3.659758592091095*^9, 3.659758596245595*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Framed", "[", 
+   RowBox[{"lbl", ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"FrameMargins", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ImageSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Scaled", "@", "1"}], ",", "Automatic"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"CurrentValue", "@", "\"\<MouseOver\>\""}], ",", "None", ",", 
+        RowBox[{"GrayLevel", "@", ".8"}]}], "]"}], "]"}]}]}], "]"}], "\n", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6597644006749883`*^9, 3.659764444588853*^9}, {
+  3.659764914898278*^9, 3.6597649213175635`*^9}, {3.6597650067262473`*^9, 
+  3.659765016128828*^9}}],
+
+Cell[BoxData["EventHandler"], "Input",
+ CellChangeTimes->{{3.659764551816679*^9, 3.6597645540491333`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Framed", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Button", "[", 
+    RowBox[{"1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"120", ",", "Full"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", "Full"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"ImageMargins", "\[Rule]", "0"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ImageSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"120", ",", "Full"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", "Full"}], "}"}]}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrameMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"FrameStyle", "\[Rule]", "None"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6597646405750017`*^9, 3.6597647574404507`*^9}, {
+  3.659764793245778*^9, 3.659764817863307*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Framed", "[", 
+  RowBox[{"\"\<1\>\"", ",", 
+   RowBox[{"BaseStyle", "\[Rule]", "\"\<Panel\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.659765358157468*^9, 3.659765379569208*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Framed", "[", 
+   RowBox[{
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Pane", "[", 
+          RowBox[{"\"\<test\>\"", ",", "120"}], "]"}], ",", "\"\<>\>\""}], 
+        "}"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Spacings", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"Alignment", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Left", ",", "Right"}], "}"}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"BaseStyle", "\[Rule]", "\"\<Panel\>\""}], ",", 
+    RowBox[{"FrameStyle", "\[Rule]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"level", "\[Equal]", "0"}], ",", "2", ",", "None"}], "]"}]}], 
+    ",", 
+    RowBox[{"FrameMargins", "\[Rule]", "5"}], ",", 
+    RowBox[{"ImageMargins", "\[Rule]", "0"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"120", ",", "Full"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Automatic", ",", "Full"}], "}"}]}], "}"}]}], ",", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"CurrentValue", "@", "\"\<MouseOver\>\""}], ",", 
+        RowBox[{"GrayLevel", "@", ".8"}], ",", "None"}], "]"}], "]"}]}]}], 
+   "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.6597655100889196`*^9, 3.659765534573306*^9}, {
+  3.659765568450632*^9, 3.6597656025933805`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+uSOUdlegZQAQxiYxlHaHtaxlPHctD4fLaBkAhJFarg2TpuUur6qZo5lTk8to
+GQCExCSGjnu1dZMu+XVzzdHJ9coYvtrXgJYBQEiMlpfL9oqfOBctTwlaBgCB
+v/IrAbQMAAJaLgG0DAACWi4BtAwAAlouAbQMAAJaLgG0DAACWi4BtAwAAlou
+AbQMAAJaLgG0DAACWi4BtAwAAlouAbQMAAJaLgG0DHC8fPjJa1/+9WsPvvj0
+wbsvfvnXLz5Xvd792YdOpc8fdpOqF1ouAbQMcLw0WlbKlZdh5rfff9GqgJZL
+AC0DHC9Ky1XA3Hz+4mfPmx+7OFl9rOqj5RJAywA3iMXtN8dUb7X8/CefSkkT
+HncebkPlVz8320fLuXnmmWcWkJtnn312mj0Wjp3Kye0reY5Wy6Z4DS23CeeH
+b1uLQMu5YROUwIITFkhAnDzGzGj55sEmKAG0DIOYNh5jZrR882g3we8gH+SR
+snDjEkeOh6fRMrnlIlmg5dywF2RhMZczlH4tcydGiaDl7LAXZAEtf2F+5L7l
+kkDL2WEvyAJa/sKoxF/5FQVazg57QRZmo+XR8IPMDlrODntBFtByDH6Q2UHL
+2WEvyAJajhH/Qa6Xi5OzrfkmONUrXizX6tP27ETdC6MLwQEtZwctZwEtx5hO
+y42Dl8ulYeD1ct463m79A5cPWs4OWs4CWo4xcbRsm3i9DNaZDfW5w/CZAlrO
+DlrOAlqOkarldZePUJ5N0bLOYczazt1qiK6DuJbfuLP4ystvmW+CUzVvvfwV
+lTW684ZZ0fwIHmg5C2g5RpqWlVRqw/SE0E8jeYtY5Vlhp90NJtRyVWT7t/H0
+nTtu8Xx46y13tYVAy1lAyzHGJjGUdkdpeeZeHgiXJ9WyX+13AVvPh/pMYTF4
+sjBhKi98mds/JkeP0jMCLccY+YOsf3T7aXmWP8Gk5HKqlt/oMhTKvL6WdQ7D
+njBjLbd0KyZ4zKqZUMveT92/FB64OD5P0HKMxCRG9+MTK4/Ssk59zIz1MmXH
+S9OykkptmJ4Q2plRPs5byx3RJPukWk7cL+Yaqhig5RiJP8jl8sQ+MUvRchcr
+ctdyP2OTGEqyPVp2pqHlgXB5ugvfscvcaDkAWo7BxY7sjNRybZgULdu3YsxW
+y0nJ5akvfPuT0HIAtBwDLWcnMYnRKVis3KNlneiQduaq5TfupHzzqS98P/Wm
+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
+mEW4cfw/EDmGSg==
+    "], {{0, 332}, {477, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSizeRaw->{477, 332},
+  PlotRange->{{0, 477}, {0, 332}}]], "Input",
+ CellChangeTimes->{{3.6597661096692924`*^9, 3.659766125750736*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{787, 709},
+WindowSize->{653, 709},
 WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
@@ -1206,49 +3069,66 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 91, 1, 63, "Section"],
 Cell[674, 25, 266, 5, 31, "Input"],
-Cell[943, 32, 805, 15, 172, "Input"]
+Cell[943, 32, 939, 19, 172, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1785, 52, 121, 2, 63, "Section"],
-Cell[1909, 56, 315, 7, 31, "Input"],
-Cell[2227, 65, 232, 4, 31, "Input"],
+Cell[1919, 56, 121, 2, 63, "Section"],
+Cell[2043, 60, 315, 7, 31, "Input"],
+Cell[2361, 69, 232, 4, 31, "Input"],
 Cell[CellGroupData[{
-Cell[2484, 73, 99, 1, 43, "Subsection"],
-Cell[2586, 76, 2291, 43, 452, "Input"],
-Cell[4880, 121, 149, 2, 31, "Input"]
+Cell[2618, 77, 99, 1, 43, "Subsection"],
+Cell[CellGroupData[{
+Cell[2742, 82, 2904, 54, 532, "Input"],
+Cell[5649, 138, 82838, 1553, 48, "Output"]
+}, Open  ]],
+Cell[88502, 1694, 132, 2, 31, "Input"],
+Cell[88637, 1698, 149, 2, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88823, 1705, 154, 2, 43, "Subsection"],
+Cell[88980, 1709, 315, 7, 31, "Input"],
+Cell[89298, 1718, 232, 4, 31, "Input"],
+Cell[89533, 1724, 1353, 29, 232, "Input"],
+Cell[90889, 1755, 349, 10, 212, "Input"],
+Cell[91241, 1767, 333, 8, 52, "Input"],
+Cell[91577, 1777, 94, 1, 31, "Input"],
+Cell[91674, 1780, 144, 2, 31, "Input"],
+Cell[91821, 1784, 587, 14, 112, "Input"],
+Cell[92411, 1800, 103, 1, 31, "Input"],
+Cell[92517, 1803, 129, 2, 31, "Input"],
+Cell[92649, 1807, 185, 3, 31, "Input"],
+Cell[92837, 1812, 136, 2, 31, "Input"],
+Cell[92976, 1816, 525, 15, 52, "Input"],
+Cell[93504, 1833, 144, 3, 31, "Input"],
+Cell[93651, 1838, 1000, 29, 112, "Input"],
+Cell[94654, 1869, 432, 12, 52, "Input"],
+Cell[95089, 1883, 568, 13, 72, "Input"],
+Cell[95660, 1898, 1106, 26, 172, "Input"],
+Cell[96769, 1926, 3131, 74, 92, "Input"],
+Cell[99903, 2002, 2715, 49, 74, "Input"],
+Cell[102621, 2053, 23382, 394, 66, "Input"],
+Cell[126006, 2449, 320, 9, 31, "Input"],
+Cell[126329, 2460, 105, 1, 31, "Input"],
+Cell[126437, 2463, 444, 12, 52, "Input"],
+Cell[126884, 2477, 626, 15, 92, "Input"],
+Cell[127513, 2494, 756, 21, 52, "Input"],
+Cell[128272, 2517, 300, 7, 31, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5066, 128, 154, 2, 35, "Subsection"],
-Cell[5223, 132, 315, 7, 31, "Input"],
-Cell[5541, 141, 232, 4, 31, "Input"],
-Cell[CellGroupData[{
-Cell[5798, 149, 1353, 29, 212, "Input"],
-Cell[7154, 180, 11699, 233, 224, "Output"]
-}, Open  ]],
-Cell[18868, 416, 349, 10, 212, InheritFromParent],
-Cell[19220, 428, 333, 8, 31, "Input"],
-Cell[19556, 438, 94, 1, 31, "Input"],
-Cell[19653, 441, 144, 2, 31, "Input"],
-Cell[19800, 445, 587, 14, 112, "Input"],
-Cell[20390, 461, 103, 1, 31, "Input"],
-Cell[20496, 464, 129, 2, 31, "Input"],
-Cell[20628, 468, 185, 3, 31, "Input"],
-Cell[20816, 473, 136, 2, 31, "Input"],
-Cell[20955, 477, 525, 15, 52, "Input"],
-Cell[21483, 494, 144, 3, 31, "Input"],
-Cell[21630, 499, 1000, 29, 72, "Input"],
-Cell[22633, 530, 432, 12, 31, "Input"],
-Cell[23068, 544, 568, 13, 72, "Input"],
-Cell[23639, 559, 1106, 26, 172, "Input"],
-Cell[24748, 587, 3131, 74, 92, InheritFromParent],
-Cell[27882, 663, 2715, 49, 74, "Input"],
-Cell[30600, 714, 23382, 394, 66, "Input"],
-Cell[53985, 1110, 320, 9, 31, "Input"],
-Cell[54308, 1121, 105, 1, 31, "Input"],
-Cell[54416, 1124, 444, 12, 52, "Input"],
-Cell[54863, 1138, 626, 15, 72, "Input"],
-Cell[55492, 1155, 756, 21, 52, "Input"],
-Cell[56251, 1178, 300, 7, 31, "Input"]
+Cell[128609, 2529, 100, 1, 35, "Subsection"],
+Cell[128712, 2532, 1120, 25, 192, "Input"],
+Cell[129835, 2559, 5779, 130, 772, "Input"],
+Cell[135617, 2691, 197, 4, 31, "Input"],
+Cell[135817, 2697, 151, 3, 31, "Input"],
+Cell[135971, 2702, 798, 23, 132, "Input"],
+Cell[136772, 2727, 162, 3, 31, "Input"],
+Cell[136937, 2732, 125, 2, 31, "Input"],
+Cell[137065, 2736, 837, 19, 172, "Input"],
+Cell[137905, 2757, 106, 1, 31, "Input"],
+Cell[138014, 2760, 986, 26, 152, "Input"],
+Cell[139003, 2788, 206, 4, 31, "Input"],
+Cell[139212, 2794, 1540, 42, 152, "Input"],
+Cell[140755, 2838, 12558, 210, 347, "Input"]
 }, Open  ]]
 }, Open  ]]
 }

@@ -45,44 +45,42 @@ Begin["`Private`"]
     n
   ];
 
-    (* action label wrapper*)
-  parseSpec[menuStates_, lbl_ :> action_, n_]:= EventHandler[
-    Button[lbl, action, Appearance -> "Frameless" ]
+    (************* action label wrapper **************)
+  parseSpec[menuStates_, RuleDelayed[lbl_ , action_], n_]:= EventHandler[
+    Button[lbl, action; (*optional*) dropSubMenu[menuStates, 1],
+      Appearance    -> "Frameless",
+      FrameMargins  -> 5,
+      ImageMargins  -> 0,
+      Alignment     -> Left,
+      ImageSize     -> {{120, Full}, {Automatic, Full}},
+      Background    -> Dynamic[If[CurrentValue@"MouseOver", GrayLevel@.8, None]]
+    ]
     ,
     {
       "MouseEntered" :> (
-        Print["-----------actionLabel------------",n];
-        (*forgetAboutClosing @ menuStates[-1];*)
         dropSubMenu[menuStates, n + 1]
       )
     },
-    PassEventsDown -> True,
-    PassEventsUp  ->True
-
-    (*"MouseExited" :> (*)
-      (*Print["Exiting actionLabel at ",n, " will run menu closing task in .4 sec"];*)
-
-      (*menuStates[-1] = scheduleMenuClosing[menuStates, n];*)
-
-    *),*)
-
+    PassEventsDown -> True
   ];
+
 
   SetAttributes[subMenuWrapper, HoldFirst];
 
   subMenuWrapper[menuStates_, level_, content_]:= EventHandler[
     Framed[
       Column[content],
-      FrameStyle->Red, FrameMargins->0, ImageMargins ->0
+      FrameStyle->None,
+      FrameMargins->0,
+      ImageMargins ->0,
+      ImageSize->{{120, Full}, {Automatic, Full}}
     ],
     {
       "MouseEntered" :> (
-        Print["------- entered subMenu-------- ", level];
         forgetAboutClosing @ menuStates[-1];
 
       ),
       "MouseExited" :> (
-        Print["------- Exiting subMenu ", level, " closing task in .4 sec"];
         menuStates[-1] = scheduleMenuClosing[menuStates, level];
       )
     }
@@ -90,7 +88,7 @@ Begin["`Private`"]
     PassEventsDown -> True
     ];
 
-
+  (************* gate item label wrapper **************)
   SetAttributes[subMenuGate, HoldFirst];
 
   subMenuGate[menuStates_, label_String, level_Integer]:= subMenuGate[
@@ -102,30 +100,29 @@ Begin["`Private`"]
   subMenuGate[menuStates_, spec_Association, level_Integer]:= DynamicModule[{thisBox, sumbMenuBox},
 
     EventHandler[
-      Framed[ spec["label"] ]
+      Framed[
+        Grid[{{ Pane[spec["label"], 100], ">"}}],
+        BaseStyle -> "Panel",
+        FrameStyle-> If[level == 0, 2, None],
+        FrameMargins->5,
+        ImageMargins ->0,
+        ImageSize->{{120, Full}, {Automatic, Full}},
+        Background -> Dynamic[If[CurrentValue@"MouseOver", GrayLevel@.8, None]]
+      ]
       ,
       {
         "MouseEntered" :> (
-          Print["-----------subMenuGate--------", level];
-          (*forgetAboutClosing @ menuStates[-1];*)
+
           dropSubMenu[menuStates, level + 1];
           NotebookDelete @ sumbMenuBox;
-          Print["setting", menuStates, " ", level + 1];
+
           menuStates[level + 1] = sumbMenuBox = attachTo[
             thisBox, spec["subMenu"], Lookup[spec, "subMenuAlignment", {Right, Top}]];
 
         )
       },
-      PassEventsUp -> True,
       PassEventsDown -> True
-      (*,
-      "MouseExited" :> (
-        Print["Exiting subMenuGate at ",level, " will run menu closing task in .4 sec"];
 
-        menuStates[-1] = scheduleMenuClosing[menuStates, level];
-
-      )
-      *)
     ]
     ,
     Initialization:>(
@@ -133,9 +130,7 @@ Begin["`Private`"]
     )
   ];
 
-  (*EventHandler[Panel["floating panel"],*)
-    (*"MouseExited" :> (NotebookDelete[*)
-      (*ParentCell[EvaluationBox[]]];)]*)
+
 
   attachTo[parentbox_, what_, alignment_] := MathLink`CallFrontEnd[
         FrontEnd`AttachCell[
@@ -144,8 +139,7 @@ Begin["`Private`"]
             what,
             StripOnInput      -> True,
             Background        -> CurrentValue@"PanelBackground",
-            CellFrame  -> 1
-            ,
+            CellFrame         -> 1,
             CellFrameMargins -> 0
             ]
           ],
@@ -158,7 +152,7 @@ Begin["`Private`"]
   SetAttributes[dropSubMenu, HoldFirst];
 
   dropSubMenu[menuStates_, n_]:= (
-    Print["droping deeper menu: ",n];
+
     If[
       ValueQ @ menuStates[n]
       ,
@@ -170,7 +164,7 @@ Begin["`Private`"]
   SetAttributes[forgetAboutClosing, HoldFirst];
   forgetAboutClosing[task_]:=(
 
-    RunScheduledTask[ Print["droping scheduled task"];RemoveScheduledTask @ task, {.1}]
+    RunScheduledTask[ Quiet @ RemoveScheduledTask @ task, {.1}]
 
   );
 
@@ -179,10 +173,10 @@ Begin["`Private`"]
 
   scheduleMenuClosing[menuStates_, level_]:=RunScheduledTask[
     If[
-      (*(Print[#];#)& @ Not @ ValueQ @ menuStates[level+1]*)
+
       True
       ,
-      Print["im trying to close menu"];
+
       dropSubMenu[menuStates, 1];(*this is enough since ParentChanged is included*)
       menuStates[-1]=.;
 

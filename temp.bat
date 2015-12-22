@@ -15,7 +15,7 @@ pause >nul
 
 git add .
 
-git commit -m "ActionNestedMenu working with old comments still there"
+git commit -m "ActionNestedMenu beta release"
 
 git status
 

@@ -5,7 +5,6 @@
       <change type="DELETED" beforePath="D:\programowanie\IDEA workspace\MoreUI\temp.bat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MoreUI.nb" afterPath="$PROJECT_DIR$/MoreUI.nb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MoreUI/MoreUI.m" afterPath="$PROJECT_DIR$/MoreUI/MoreUI.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MoreUI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/MoreUI/MoreUI.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.70804596">
-              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <caret line="187" column="4" selection-start-line="1" selection-start-column="0" selection-end-line="187" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -240,7 +239,7 @@
     <entry file="file://$PROJECT_DIR$/MoreUI/MoreUI.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70804596">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <caret line="187" column="4" selection-start-line="1" selection-start-column="0" selection-end-line="187" selection-end-column="4" />
           <folding />
         </state>
       </provider>
