@@ -8,15 +8,21 @@ Begin["`Private`"]
 
   ActionNestedMenu[menuLabel_ -> spec_] := DynamicModule[{},
 
-    Grid[{{#, Dynamic[Column@Array[menuStates,{3}],UpdateInterval->1]}}, Alignment->{Left,Top}]&@
-    subMenuWrapper[menuStates, 1, {#}]&@subMenuGate[
+    (*Grid[{{#, Dynamic[Column@Array[menuStates,{3}],UpdateInterval->1]}}, Alignment->{Left,Top}]&@*)
+    subMenuWrapper[
       menuStates,
-      <|
-        "label"             -> menuLabel,
-        "subMenuAlignment"  -> {Left, Bottom},
-        "subMenu"           -> parseSpec[menuStates, spec, 1]
-      |>,
-      0
+      0,
+      {
+        subMenuGate[
+          menuStates,
+          <|
+            "label"             -> menuLabel,
+            "subMenuAlignment"  -> {Left, Bottom},
+            "subMenu"           -> parseSpec[menuStates, spec, 1]
+          |>,
+          0
+        ]
+      }
     ]
   ];
 
@@ -41,14 +47,25 @@ Begin["`Private`"]
 
     (* action label wrapper*)
   parseSpec[menuStates_, lbl_ :> action_, n_]:= EventHandler[
-    Button[lbl, action, Appearance -> "DefaultButton"]
+    Button[lbl, action, Appearance -> "Frameless" ]
     ,
-    "MouseEntered" :> (
-      Print["-----------actionLabel---------------"];
-      forgetAboutClosing @ menuStates[-1];
-      dropSubMenu[menuStates, n+1]
-    ),
-    PassEventsDown -> True
+    {
+      "MouseEntered" :> (
+        Print["-----------actionLabel------------",n];
+        (*forgetAboutClosing @ menuStates[-1];*)
+        dropSubMenu[menuStates, n + 1]
+      )
+    },
+    PassEventsDown -> True,
+    PassEventsUp  ->True
+
+    (*"MouseExited" :> (*)
+      (*Print["Exiting actionLabel at ",n, " will run menu closing task in .4 sec"];*)
+
+      (*menuStates[-1] = scheduleMenuClosing[menuStates, n];*)
+
+    *),*)
+
   ];
 
   SetAttributes[subMenuWrapper, HoldFirst];
@@ -58,20 +75,18 @@ Begin["`Private`"]
       Column[content],
       FrameStyle->Red, FrameMargins->0, ImageMargins ->0
     ],
-    "MouseEntered":>(
-      forgetAboutClosing @ menuStates[-1];
-      Print["just entered subMenu ", level]
+    {
+      "MouseEntered" :> (
+        Print["------- entered subMenu-------- ", level];
+        forgetAboutClosing @ menuStates[-1];
 
-    ),
-    "MouseExited" :> (
-      Print["Exiting subMenu ",level, " will run menu closing task in .4 sec"];
-
-      menuStates[-1] = scheduleMenuClosing[menuStates, level];
-      (*Print["menuStates[-1] - ",Head@menuStates[-1]];*)
-
-    )
+      ),
+      "MouseExited" :> (
+        Print["------- Exiting subMenu ", level, " closing task in .4 sec"];
+        menuStates[-1] = scheduleMenuClosing[menuStates, level];
+      )
+    }
     ,
-
     PassEventsDown -> True
     ];
 
@@ -89,17 +104,28 @@ Begin["`Private`"]
     EventHandler[
       Framed[ spec["label"] ]
       ,
-      "MouseEntered" :> (
-        Print["-----------subMenuGate---------------"];
-        forgetAboutClosing @ menuStates[-1];
+      {
+        "MouseEntered" :> (
+          Print["-----------subMenuGate--------", level];
+          (*forgetAboutClosing @ menuStates[-1];*)
+          dropSubMenu[menuStates, level + 1];
+          NotebookDelete @ sumbMenuBox;
+          Print["setting", menuStates, " ", level + 1];
+          menuStates[level + 1] = sumbMenuBox = attachTo[
+            thisBox, spec["subMenu"], Lookup[spec, "subMenuAlignment", {Right, Top}]];
 
-        dropSubMenu[menuStates, level+1];
-        NotebookDelete @ sumbMenuBox;
-        Print["setting", menuStates," ", level+1];
-        menuStates[level+1] = sumbMenuBox = attachTo[
-          thisBox, spec["subMenu"], Lookup[spec, "subMenuAlignment", {Right,Top}]];
+        )
+      },
+      PassEventsUp -> True,
+      PassEventsDown -> True
+      (*,
+      "MouseExited" :> (
+        Print["Exiting subMenuGate at ",level, " will run menu closing task in .4 sec"];
+
+        menuStates[-1] = scheduleMenuClosing[menuStates, level];
 
       )
+      *)
     ]
     ,
     Initialization:>(
@@ -118,13 +144,14 @@ Begin["`Private`"]
             what,
             StripOnInput      -> True,
             Background        -> CurrentValue@"PanelBackground",
-            CellFrameMargins  -> 0
+            CellFrame  -> 1
+            ,
+            CellFrameMargins -> 0
             ]
           ],
           {Automatic, alignment},
           {Left, Top},
-          "ClosingActions" -> {
-            "ParentChanged", "EvaluatorQuit"}
+          "ClosingActions" -> { "ParentChanged", "EvaluatorQuit"}
         ]
   ];
 
@@ -140,9 +167,11 @@ Begin["`Private`"]
     ]
   );
 
-  forgetAboutClosing[task_ScheduledTaskObject]:=(
-    Print["droping scheduled task"];
-    Quiet @ RemoveScheduledTask @ task;
+  SetAttributes[forgetAboutClosing, HoldFirst];
+  forgetAboutClosing[task_]:=(
+
+    RunScheduledTask[ Print["droping scheduled task"];RemoveScheduledTask @ task, {.1}]
+
   );
 
 
@@ -161,7 +190,7 @@ Begin["`Private`"]
     RemoveScheduledTask[$ScheduledTask];
 
     ,
-    {.2}
+    {.5}
   ];
 
 
