@@ -3,8 +3,129 @@ BeginPackage["MoreUI`"]
 
 	ActionNestedMenu;
   SearchPopup;
+  
+  ImagePane;
+  PlotRangeSelector;
 
 Begin["`Private`"]
+
+ImagePane::usage = "ImagePane[Dynamic[imgSource], graphicsOverlay] displays resized image to spare FrontEnd dealing with whatever huge image could be.";
+
+ImagePane[Dynamic[image_], realPrimitives_:{} ]:= DynamicModule[
+  { realDim, realAspectRatio, viewWidth, viewDim, plotRange
+    , $$shift, $$scaling, $$cropRange, $$imageView, crop, init, resetCrop
+  }
+  
+  , init[]:= (
+      realDim = N @ ImageDimensions @ image
+    ; realAspectRatio = #2/# & @@ realDim
+    ; viewWidth = 500.
+    ; viewDim = viewWidth realDim / realDim[[1]]
+    ; plotRange = Transpose @ {{0,0},viewDim}
+  )
+  
+  
+  ; crop[ranges:{{xMin_, xMax_},{yMin_, yMax_}}]:=Module[
+    {temp}
+    , temp = ranges
+    ; temp[[2, 2]] = yMin + (xMax - xMin) realAspectRatio
+    ; temp = Transpose @ temp
+    
+    ; temp =( # / $$scaling + $$shift) & /@ temp
+    
+    ; $$cropRange = Transpose @ temp
+    ; $$shift = $$cropRange[[All,1]]
+    ; $$scaling = viewWidth / ($$cropRange[[1,2]]-$$cropRange[[1,1]])
+    
+    ; $$imageView = ImageResize[
+      ImageTrim[image, Transpose @ $$cropRange]
+      , viewWidth
+      , Resampling -> If[$$scaling > 1, "Nearest", Automatic]
+    ]
+  ]
+  
+  ; resetCrop[]:= (
+    
+      $$shift = {0,0}
+    ; $$scaling = viewWidth / realDim[[1]]
+    ; crop @ Transpose @ {{0,0}, viewDim }
+  )
+  
+  ; init[]
+  ; resetCrop[]
+  
+  ; DynamicWrapper[
+    #
+    , $$imageView = ImageResize[ImageTrim[image, Transpose @ $$cropRange], viewWidth, Resampling -> If[$$scaling > 1, "Nearest", Automatic]]
+    , TrackedSymbols :> {image}
+  ]& @
+  PlotRangeSelector[
+    Dynamic @ plotRange
+    , Graphics[
+    { Inset[Dynamic[$$imageView], {0,0}, {0,0}, viewDim]
+      , GeometricTransformation[
+      realPrimitives
+      , Dynamic[ScalingTransform[{1,1} $$scaling]@*TranslationTransform[ - $$shift ]]
+    ]
+    }
+    , ImageSize -> viewDim
+    , BaseStyle-> { CacheGraphics -> False }
+  ]
+    , "on-plotRangeChange" -> crop
+    , "on-plotRangeReset" -> resetCrop
+    , AspectRatio -> realAspectRatio
+  ]
+]
+
+
+PlotRangeSelector::usage = "PlotRangeSelector[graphics] is an EventHandler that allows user to modify scene plot range with dragged rectangle.";
+
+PlotRangeSelector // Options = {
+  "on-plotRangeChange" -> Automatic
+  , "on-plotRangeReset"  -> Automatic
+  , AspectRatio          -> Automatic
+}
+
+PlotRangeSelector[graphics_Graphics, opt:OptionsPattern[] ]:= DynamicModule[{plotRange = PlotRange @ graphics},
+  PlotRangeSelector[Dynamic @ plotRange, graphics, opt]
+]
+
+PlotRangeSelector[ Dynamic[plotRange_], graphics_,  OptionsPattern[]]:= DynamicModule[
+  { show = False, pos1, pos2, original = plotRange
+    , onPlotRangeChange = OptionValue["on-plotRangeChange"] /. Automatic -> Function[val, plotRange = val]
+    , onPlotRangeReset = OptionValue["on-plotRangeReset"] /. Automatic -> Function[ plotRange = original]
+    , onDrag
+  },
+  With[
+    {  mousePosition := CurrentValue[{MousePosition,"Graphics"}], aspectRatio = OptionValue[AspectRatio]},
+    
+    onDrag = If[ NumericQ @ aspectRatio
+      , Function[pos2 = pos1 + {  #[[1]] ,  Sign[#[[2]]] aspectRatio #[[1]] } &@(mousePosition - pos1) ]
+      , Function[pos2 = mousePosition ]
+    ]
+    
+    ; EventHandler[
+      Show[
+        graphics
+        , Graphics[{
+        Dynamic@If[show
+          , { FaceForm[], EdgeForm@Directive[White, Thin,Dashed], Rectangle[Dynamic@pos1,Dynamic@pos2]}
+          , {}
+        ]
+      }]
+        , PlotRange -> Dynamic @ plotRange
+      ]
+      , { "MouseDown"        :> ( pos1 = mousePosition)
+        , "MouseDragged"     :> ( show = True; onDrag[])
+        , "MouseUp"          :> If[show, show=False; onPlotRangeChange[ Sort/@Transpose[{pos1,pos2}] ]]
+        , {"MouseClicked", 1}:> Null
+        , {"MouseClicked", 2}:> ( onPlotRangeReset[] )
+      }
+    ]
+  ]];
+
+
+
 
   ActionNestedMenu[menuLabel_ -> spec_] := DynamicModule[{},
 
