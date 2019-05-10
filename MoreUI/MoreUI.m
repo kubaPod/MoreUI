@@ -6,8 +6,36 @@ BeginPackage["MoreUI`"]
   
   ImagePane;
   PlotRangeSelector;
+  QueuedController;
 
 Begin["`Private`"]
+
+
+
+QueuedController // Attributes = {HoldRest};
+
+QueuedController[
+  controller_[Dynamic[var_, dragF_:Automatic], rest___],
+  action_
+]:=DynamicModule[
+  { finished = True
+    , temp = var
+    , onDrag = dragF
+  }
+  , DynamicWrapper[#, temp = var, Evaluate @ ToTrackedSymbol @ var]& @
+  DynamicWrapper[
+    controller[Dynamic[ temp, {onDrag, (finished = False)&}], rest ]
+    , If[ Not @ finished, action @ temp; finished = True]
+    , SynchronousUpdating->False
+    , TrackedSymbols:>{finished}
+  ]
+]
+
+
+ToTrackedSymbol // Attributes = {HoldAll};
+ToTrackedSymbol[ s_Symbol ]:= TrackedSymbols :> {s};
+ToTrackedSymbol[ (s_Symbol)[___] ]:= TrackedSymbols :> {s};
+ToTrackedSymbol[ ___ ]:= TrackedSymbols :> Full
 
 ImagePane::usage = "ImagePane[Dynamic[imgSource], graphicsOverlay] displays resized image to spare FrontEnd dealing with whatever huge image could be.";
 
