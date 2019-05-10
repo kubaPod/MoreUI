@@ -31,8 +31,7 @@ OpenCloseAll::usage = "OpenCloseAll[nbObj, cellStyle, Opened/Close] openes/close
 		 which parents are cellStyles.";
 
 QueuedDynamicModule;
-QueuedButton;
-QueuedController;
+
 
 CenterToParent;
 QueuedActionMenu;
@@ -196,36 +195,6 @@ QueuedDynamicModule[{spec___}, body_]:=DynamicModule[{spec, initializationDone =
 
 
 
-(* ::Subsection:: *)
-(*queued Button*)
-
-
-QueuedButton::usage = "Heavy duty Button, it will show a progress indicator till the procedure is completed.";
-QueuedButton // Attributes = HoldRest;
-QueuedButton // Options = {
-  CachedValue -> Automatic
-  , "ActionDelay" -> 0
-};
-
-QueuedButton[lbl_, action_, patt:OptionsPattern[{QueuedButton, Button}]]:= With[
-  { temp = OptionValue[CachedValue] /. Automatic -> ProgressIndicator[Appearance -> "Necklace"]
-    , delay = OptionValue["ActionDelay"]
-  }
-  , DynamicModule[{done = True}
-    , PaneSelector[
-      { True ->Button[lbl
-        , done = False; Pause[delay]; CheckAbort[action, $Aborted]; done = True;
-        , Method -> "Queued"
-        , FilterRules[{patt}, Options[Button]]
-      ]
-        , False -> temp
-      }
-      , Dynamic[ done + 0 ]
-      , ImageSize -> All
-      , Alignment->{Center, Center}
-    ]
-  ]
-];
 
 
 (* ::Subsection::Closed:: *)
@@ -254,22 +223,6 @@ QueuedActionMenu[lbl_, actions_, patt : OptionsPattern[Button]] := DynamicModule
   ]
 ];
 
-
-
-(* ::Subsection::Closed:: *)
-(*queued Controller*)
-
-
-QueuedController // Attributes = {HoldRest};
-QueuedController[controller_, action_]:=With[{f := QueuedController`finished}, DynamicModule[
-  {f = True}
-  , DynamicWrapper[
-    Dynamic[If[TrueQ @ f, controller, ProgressIndicator[Appearance->"Percolate"]]]
-    , If[ Not @ f, action; f = True ]
-    , SynchronousUpdating->False
-    , TrackedSymbols:>{f}
-  ]
-]];
 
 
 

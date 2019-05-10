@@ -7,9 +7,38 @@ BeginPackage["MoreUI`"]
   ImagePane;
   PlotRangeSelector;
   QueuedController;
+  BusyButton;
 
 Begin["`Private`"]
 
+
+
+BusyButton::usage = "Heavy duty Button, it will show a progress indicator till the procedure is completed.";
+BusyButton // Attributes = HoldRest;
+BusyButton // Options = {
+  CachedValue -> Automatic
+  , "ActionDelay" -> 0
+};
+
+BusyButton[lbl_, action_, patt:OptionsPattern[{BusyButton, Button}]]:= With[
+  {   temp = OptionValue[CachedValue] /. Automatic -> ProgressIndicator[Appearance -> "Necklace"]
+    , delay = OptionValue["ActionDelay"]
+  }
+  , DynamicModule[{done = True}
+    , PaneSelector[
+      { True ->Button[lbl
+        , done = False; Pause[delay]; CheckAbort[action, $Aborted]; done = True;
+        , Method -> "Queued"
+        , FilterRules[{patt}, Options[Button]]
+      ]
+      , False -> temp
+      }
+      , Dynamic[ done + 0 ]
+      , ImageSize -> All
+      , Alignment->{Center, Center}
+    ]
+  ]
+];
 
 
 QueuedController // Attributes = {HoldRest};
