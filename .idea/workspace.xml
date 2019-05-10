@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d57be5-35a9-4145-b88a-db6d03005e7d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/FrontEndUtilities.m" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEndUtilities.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoreUI/MoreUI.m" beforeDir="false" afterPath="$PROJECT_DIR$/MoreUI/MoreUI.m" afterDir="false" />
     </list>
     <ignored path="MoreUI.iws" />
@@ -24,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MoreUI/MoreUI.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="546">
+              <caret line="45" column="123" selection-start-line="45" selection-start-column="123" selection-end-line="45" selection-end-column="123" />
             </state>
           </provider>
         </entry>
@@ -249,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MoreUI/MoreUI.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="546">
+          <caret line="45" column="123" selection-start-line="45" selection-start-column="123" selection-end-line="45" selection-end-column="123" />
         </state>
       </provider>
     </entry>

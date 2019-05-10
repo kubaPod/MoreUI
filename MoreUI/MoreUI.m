@@ -43,6 +43,8 @@ BusyButton[lbl_, action_, patt:OptionsPattern[{BusyButton, Button}]]:= With[
 
 QueuedController // Attributes = {HoldRest};
 
+QueuedController::usage = "QueuedController[controller, action] will execute action after dragging of controller is done.";
+
 QueuedController[
   controller_[Dynamic[var_, dragF_:Automatic], rest___],
   action_
