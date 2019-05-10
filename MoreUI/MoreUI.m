@@ -11,7 +11,10 @@ BeginPackage["MoreUI`"]
 
 Begin["`Private`"]
 
-
+(*TODO: ImagePane image size*)
+(*TODO: ImagePane / PLotRangeSelector style*)
+(*TODO: Downsampling method for ImagePane *)
+(*TODO: fix plot range selecor area when the current position is on the left of the anchor*)
 
 BusyButton::usage = "Heavy duty Button, it will show a progress indicator till the procedure is completed.";
 BusyButton // Attributes = HoldRest;
@@ -69,6 +72,7 @@ ToTrackedSymbol[ (s_Symbol)[___] ]:= TrackedSymbols :> {s};
 ToTrackedSymbol[ ___ ]:= TrackedSymbols :> Full
 
 ImagePane::usage = "ImagePane[Dynamic[imgSource], graphicsOverlay] displays resized image to spare FrontEnd dealing with whatever huge image could be.";
+
 
 ImagePane[Dynamic[image_], realPrimitives_:{} ]:= DynamicModule[
   { realDim, realAspectRatio, viewWidth, viewDim, plotRange
