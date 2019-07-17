@@ -10,6 +10,7 @@ BeginPackage["MoreUI`"]
   BusyButton;
   
   FESize;
+  WithContextMenu;
 
 Begin["`Private`"]
 
@@ -18,6 +19,47 @@ Begin["`Private`"]
 (*TODO: ResizePane feature with resize action stretch or recrop *)
 (*TODO: Downsampling method for ImagePane *)
 (*TODO: fix plot range selecor area when the current position is on the left of the anchor*)
+
+
+WithContextMenu::usage = "WithContextMenu[expr, {lbl:>action..}|whatever] adds a context menu to the expr. " <>
+  "Uses AttachedCells.";
+
+WithContextMenu[menu_] := Function[expr, WithContextMenu[expr, menu]];
+
+WithContextMenu[expr_, menu : {__RuleDelayed}] := WithContextMenu[
+  expr
+  , ButtonBar[
+    menu /. (lbl_ :>
+    action_) :> (lbl :> (NotebookDelete@EvaluationCell[]; action)),
+    Appearance -> "Vertical", FrameMargins -> {{15, 15}, {5, 5}}]
+]
+
+WithContextMenu[expr_, menu_] := DynamicModule[{cell}
+  , EventHandler[
+    expr
+    , {
+      {"MouseClicked", 2} :> ( NotebookDelete @ cell;
+      cell = MathLink`CallFrontEnd[
+        FrontEnd`AttachCell[
+          EvaluationNotebook[]
+          ,
+          Cell[ BoxData @ ToBoxes @ menu, CellFrame -> True,
+            CellFrameMargins -> {{0, 0}, {0, 0}}]
+          , {
+          Offset[-(CurrentValue[{"MousePosition", "WindowAbsolute"}] /
+          AbsoluteCurrentValue[Magnification]), {0, 0}]
+          , {Left, Top}
+        }
+          , {Center, Top}
+          , "ClosingActions" -> {"OutsideMouseClick"}
+        ]
+      ];
+      )
+    }
+    , PassEventsDown -> False
+  ]
+]
+
 
 FESize::usage = "FESize[expr] is a small utility function for a compact representation of responsive sizes."<>
 " E.g. instead of using ImageSize -> - 200 + FrontEnd`CurrentValue[WindowSize] / FrontEnd`CurrentValue[Magnification]"<>
