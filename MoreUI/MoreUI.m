@@ -8,13 +8,26 @@ BeginPackage["MoreUI`"]
   PlotRangeSelector;
   QueuedController;
   BusyButton;
+  
+  FESize;
 
 Begin["`Private`"]
 
 (*TODO: ImagePane image size*)
 (*TODO: ImagePane / PLotRangeSelector style*)
+(*TODO: ResizePane feature with resize action stretch or recrop *)
 (*TODO: Downsampling method for ImagePane *)
 (*TODO: fix plot range selecor area when the current position is on the left of the anchor*)
+
+FESize::usage = "FESize[expr] is a small utility function for a compact representation of responsive sizes."<>
+" E.g. instead of using ImageSize -> - 200 + FrontEnd`CurrentValue[WindowSize] / FrontEnd`CurrentValue[Magnification]"<>
+" one can write ImageSize -> FESize[ \"WindowSize\" - 200].";
+
+FESize[expr_]:= expr /. {
+    "WindowWidth"  -> FrontEnd`CurrentValue[{WindowSize, 1}] / FrontEnd`CurrentValue[Magnification]
+  , "WindowHeight" -> FrontEnd`CurrentValue[{WindowSize, 2}] / FrontEnd`CurrentValue[Magnification]
+  , "WindowSize"   -> FrontEnd`CurrentValue[WindowSize] / FrontEnd`CurrentValue[Magnification]
+};
 
 BusyButton::usage = "Heavy duty Button, it will show a progress indicator till the procedure is completed.";
 BusyButton // Attributes = HoldRest;
