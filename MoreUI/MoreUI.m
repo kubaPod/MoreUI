@@ -11,6 +11,7 @@ BeginPackage["MoreUI`"]
   
   FESize;
   WithContextMenu;
+  StartNotebookProgressIndicator;
 
 Begin["`Private`"]
 
@@ -19,6 +20,19 @@ Begin["`Private`"]
 (*TODO: ResizePane feature with resize action stretch or recrop *)
 (*TODO: Downsampling method for ImagePane *)
 (*TODO: fix plot range selecor area when the current position is on the left of the anchor*)
+
+StartNotebookProgressIndicator::usage = "StartNotebookProgressIndicator[nb, options] attaches a progress indicator at "<>
+  "the center of the nb. Uses AttachedCells.";
+
+StartNotebookProgressIndicator[nb_NotebookObject, spec___]:= MathLink`CallFrontEnd[
+  FrontEnd`AttachCell[
+      nb
+    , Cell[ BoxData @ ToBoxes @ ProgressIndicator[spec, Appearance->"Necklace",ImageSize->150],Background->Transparent]
+    , {Center,Center}
+    , {Center,Center}
+    , "ClosingActions"->{}
+  ]
+]
 
 
 WithContextMenu::usage = "WithContextMenu[expr, {lbl:>action..}|whatever] adds a context menu to the expr. " <>
